@@ -1,0 +1,85 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix tgn: <http://vocab.getty.edu/page/tgn/>.
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix rdac: <http://rdaregistry.info/Elements/c/>
+@prefix rdai: <http://rdaregistry.info/Elements/i/>
+@prefix rdau: <http://rdaregistry.info/Elements/u/>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2008/05/skos#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix fabio: <http://purl.org/spar/fabio/>.
+@prefix eac-cpf: <http://culturalis.org/eac-cpf#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dbc: <http://dbpedia.org/resource/Category/>.
+@prefix lccn: <https://lccn.loc.gov/>.
+
+
+<https://ada lodlace.github.io/people_ada_lovelace> 
+	rdf:type foaf:Person;
+	foaf:name “Lovelace, Ada King, Countess of, 1815-1852”^^xsd:string;
+	owl:sameAs viaf:61632881;
+	eac-cpf:hasPlace tgn:7002445; #London
+	eac-cpf:existDates “1815-1852”^^xsd:string;
+	foaf:knows <https://ada lodlace.github.io/people_luigi_federico_menabrea>;
+	foaf:knows <https://ada lodlace.github.io/people_charles_babbage>; 
+	dc:subject <https://ada lodlace.github.io/concept_computer_history>;
+	dc:subject <https://ada lodlace.github.io/concept_women_computer_scientists>;
+	dc:relation <https://ada lodlace.github.io/thing_analytical_engine>;
+	foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Ada_Lovelace>.
+
+<https://ada lodlace.github.io/people_luigi_federico_menabrea>
+
+<https://ada lodlace.github.io/people_charles_babbage>
+
+<https://ada lodlace.github.io/place_London>
+	rdf:type crm:E53_Place;
+	rdf:label "London"^^xsd:string;
+	owl:sameAs tgn:7011781;
+	dc:isPartOf tgn:7002445; #England
+
+<https://ada lodlace.github.io/date_sketch_analytical_engine>
+	rdf:type crm:E52_Time-Span;
+	rdf:label "1843"^^xsd:gYear;
+	dc:relation <https://ada lodlace.github.io/concept_computer_history>;
+
+<https://ada lodlace.github.io/thing_analytical_engine> 
+	rdf:type crm:E73_Information_Object;
+	rdf:label "Analytical Engine"^^xsd:string;
+	dc:subject dbc:One-of-a-kind_computers;
+	dc:creator <https://ada lodlace.github.io/people_charles_babbage>;
+	foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Analytical_Engine>.
+
+<https://ada lodlace.github.io/concept_women_computer_scientists> 
+	rdf:type skos:Concept;
+	rdf:label "Women Computer Scientists"^^xsd:string;
+	owl:sameAs lccn:sh98006903; #Women in computer science
+	skos:broader lccn:sh89003285. #Computer Science
+
+<https://ada lodlace.github.io/concept_computer_history> 
+	rdf:type skos:Concept;
+	rdf:label "Computer History"^^xsd:string;
+	owl:sameAs lccn:sh2008101514; #Computer -- History
+	skos:broader lccn:sh89003285; #Computer Science;
+	skos:narrower dbc:One-of-a-kind_computers.
+
+<https://ada lodlace.github.io/production_sketch_analytical_engine> 
+	rdf:type crm:E12_Production;
+	crm:P108_has_produced <https://ada lodlace.github.io/sketch_analytical_engine>;
+	crm:P7_took_place_at <https://ada lodlace.github.io/place_London>;
+	crm:P14_carried_out_by <https://ada lodlace.github.io/people_luigi_federico_menabrea>;
+	crm:P4_has_time-span <https://ada lodlace.github.io/date_sketch_analytical_engine>.
+
+<https://ada lodlace.github.io/sketch_analytical_engine> 
+	rdf:type rdac:Item.en;
+	rdai:titleOfItem.en “Sketch of the Analytical Engine invented by Charles Babbage ... with notes by the translator. Extracted from the 'Scientific Memoirs,.'etc.”^^xsd:string;
+	rdai:categoryOfItem.en fabio:Book;
+	rdau:publisher.en viaf:129445994; #R. & J. E. Taylor;
+	rdau:subject.en <https://ada lodlace.github.io/thing_analytical_engine>;
+	rdau:subject.en <https://ada lodlace.github.io/people_charles_babbage>;
+	rdai:custodianCorporateBody.en viaf:121814978;
+	rdau:translator.en <https://ada lodlace.github.io/people_ada_lovelace>;
+	rdau:annotator.en <https://ada lodlace.github.io/people_ada_lovelace>;
+	rdau:notesOnItem.en “The translator's notes signed: A.L.L. ie. Augusta Ada King, Countess Lovelace in which she describes the first algorithm in history.”^^xsd:string.
+	

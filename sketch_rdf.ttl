@@ -1,4 +1,4 @@
-@prefix ada: <http://ada-lodlace.github.io/>.
+@base <http://ada-lodlace.github.io/>.
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix dbc: <hthttp://dbpedia.org/resource/Category/>.
 @prefix dbr: <http://dbpedia.org/resource/>.
@@ -18,33 +18,33 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 
-ada:production_sketch_analytical_engine
+<production/sketch_analytical_engine>
 	rdf:type crm:E12_Production;
-	crm:P108_has_produced ada:sketch_analytical_engine;
+	crm:P108_has_produced <object/sketch_analytical_engine>;
 	crm:P7_took_place_at tgn:7002445; # London
-	crm:P14_carried_out_by ada:people_luigi_federico_menabrea;
+	crm:P14_carried_out_by <person/luigi_federico_menabrea>;
 	crm:P4_has_time-span "1843"^^xsd:gYear.
 
 
-ada:sketch_analytical_engine
+<object/sketch_analytical_engine>
 	rdf:type rdac:Item.en;
 	rdai:titleOfItem.en "Sketch of the Analytical Engine invented by Charles Babbage ... with notes by the translator. Extracted from the 'Scientific Memoirs,.'etc."^^xsd:string;
 	rdai:categoryOfItem.en fabio:Book;
 	rdau:publisher.en viaf:129445994; #R. & J. E. Taylor;
-	rdau:subject.en dbr:Analytical_Engine, ada:people_charles_babbage;
+	rdau:subject.en dbr:Analytical_Engine, <person/charles_babbage>;
 	rdai:custodianCorporateBody.en viaf:121814978;
-	rdau:translator.en ada:people_ada_lovelace;
-	rdau:annotator.en ada:people_ada_lovelace;
+	rdau:translator.en <person/ada_lovelace>;
+	rdau:annotator.en <person/ada_lovelace>;
 	rdau:notesOnItem.en "The translator's notes signed: A.L.L. ie. Augusta Ada King, Countess Lovelace in which she describes the first algorithm in history."^^xsd:string.
 
 
-ada:people_ada_lovelace
+<person/ada_lovelace>	
 	rdf:type foaf:Person;
 	foaf:name "Lovelace, Ada King, Countess of, 1815-1852"^^xsd:string;
 	owl:sameAs viaf:61632881;
 	eac-cpf:hasPlace tgn:7002445; #London
 	eac-cpf:existDates "1815-1852"^^xsd:string;
-	foaf:knows ada:people_luigi_federico_menabrea, ada:people_charles_babbage;
+	foaf:knows <person/luigi_federico_menabrea>, <person/charles_babbage>;
 	dc:subject dbr:History_of_computing_hardware, dbc:Women_computer_scientists;
 	dc:relation dbr:Analytical_Engine;
 	foaf:isPrimaryTopicOf dbr:Ada_Lovelace.

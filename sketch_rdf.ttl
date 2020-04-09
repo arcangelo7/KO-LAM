@@ -80,7 +80,7 @@
 
 <concept/analytical_engine> 
 	owl:Class crm:E73_Information_Object;
-	owl:sameAs dbr:Analytical Engine;
+	owl:sameAs dbr:Analytical_Engine;
 	rdfs:subClassOf skos:Concept;	
 	skos:broader lccn:sh2008101514, dbc:English_inventions, dbc:Mechanical_calculators, dbc:Mechanical_computers, dbc:One-of-a-kind_computers; 
 	rdf:label "Analytical Engine"^^xsd:string;
